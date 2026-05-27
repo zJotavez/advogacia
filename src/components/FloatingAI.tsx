@@ -27,7 +27,7 @@ export function FloatingAI() {
         {
           id: "welcome",
           sender: "bot",
-          text: "Seja muito bem-vindo à **HATO Advogados**. Sou o **HATO AI**, seu assistente jurídico virtual. Para darmos início ao atendimento, com quem tenho a honra de falar?",
+          text: "Seja muito bem-vindo à **DIAS Advocacia**. Sou o **DIAS AI**, seu assistente jurídico virtual. Para darmos início ao atendimento, com quem tenho a honra de falar?",
           timestamp: new Date()
         }
       ]);
@@ -52,44 +52,44 @@ export function FloatingAI() {
 
       switch (specialtyKey) {
         case "empresarial":
-          botResponse = `Compreendo a importância estratégica, prezado(a) **${activeName}**. Suas demandas de **Direito Empresarial e Imobiliário** serão conduzidas pelo nosso CEO, **Dr. Erick Hato (OAB/PB: 32.272)**. Sob rigor metodológico absoluto, ele desenhará a melhor estratégia jurídica. Deseja iniciar um contato direto com ele via WhatsApp?`;
-          waLink = `https://wa.me/${centralNumber}?text=${encodeURIComponent(`Olá, Dr. Erick Hato. Gostaria de agendar uma consulta jurídica estratégica sobre Direito Empresarial e Imobiliário com suporte da HATO AI.`)}`;
-          waLabel = "Falar com Dr. Erick Hato";
+          botResponse = `Compreendo a importância estratégica, prezado(a) **${activeName}**. Suas demandas de **Direito Empresarial e Imobiliário** serão conduzidas pela nossa fundadora, **Dra. Wellem Dias (OAB/PB: 30.120)**. Sob rigor metodológico absoluto, ela desenhará a melhor estratégia jurídica. Deseja iniciar um contato direto com ela via WhatsApp?`;
+          waLink = `https://wa.me/${centralNumber}?text=${encodeURIComponent(`Olá, Dra. Wellem Dias. Gostaria de agendar uma consulta jurídica estratégica sobre Direito Empresarial com suporte da DIAS AI.`)}`;
+          waLabel = "Falar com Dra. Wellem Dias";
           break;
         case "tributario":
-          botResponse = `Entendo a sua necessidade, prezado(a) **${activeName}**. Suas demandas de **Direito Administrativo, Tributário ou Servidores Públicos** são geridas pelo nosso CEO, **Dr. Erick Hato (OAB/PB: 32.272)**, com sólida atuação combativa. Deseja iniciar uma conversa de agendamento no WhatsApp?`;
-          waLink = `https://wa.me/${centralNumber}?text=${encodeURIComponent(`Olá, Dr. Erick Hato. Preciso de suporte especializado em Direito Administrativo / Servidor Público.`)}`;
-          waLabel = "Falar com Dr. Erick Hato";
+          botResponse = `Entendo a sua necessidade, prezado(a) **${activeName}**. Suas demandas de **Direito Empresarial e Planejamento Patrimonial** são geridas pela nossa fundadora, **Dra. Wellem Dias (OAB/PB: 30.120)**, com sólida atuação combativa. Deseja iniciar uma conversa de agendamento no WhatsApp?`;
+          waLink = `https://wa.me/${centralNumber}?text=${encodeURIComponent(`Olá, Dra. Wellem Dias. Preciso de suporte especializado em Direito Empresarial / Planejamento Patrimonial.`)}`;
+          waLabel = "Falar com Dra. Wellem Dias";
           break;
         case "bancario":
-          botResponse = `Perfeitamente, prezado(a) **${activeName}**. Cobranças indevidas e **Revisão de Juros** exigem ação célere. O especialista sênior que lidera nossa divisão de **Direito Bancário** é o **Dr. Vinicius Oliveira (OAB/PB: 34.600)**. Ele atuará firmemente para reequilibrar seus contratos. Deseja contatá-lo via WhatsApp?`;
-          waLink = `https://wa.me/${centralNumber}?text=${encodeURIComponent(`Olá, Dr. Vinicius Oliveira. Gostaria de uma análise estratégica do meu contrato bancário / revisão de juros.`)}`;
-          waLabel = "Falar com Dr. Vinicius Oliveira";
+          botResponse = `Perfeitamente, prezado(a) **${activeName}**. Cobranças indevidas e **Revisão de Juros** exigem ação célere. O especialista sênior que lidera nossa divisão de **Direito Bancário e Propriedade Intelectual** é o **Dr. João Victor (OAB/PB: 36.890)**. Ele atuará firmemente para reequilibrar seus contratos. Deseja contatá-lo via WhatsApp?`;
+          waLink = `https://wa.me/${centralNumber}?text=${encodeURIComponent(`Olá, Dr. João Victor. Gostaria de uma análise estratégica do meu contrato bancário / revisão de juros.`)}`;
+          waLabel = "Falar com Dr. João Victor";
           break;
         case "civil":
-          botResponse = `Compreendido, prezado(a) **${activeName}**. A análise técnica de **Contratos e Direito do Consumidor** requer cuidados boutique. O **Dr. Vinicius Oliveira (OAB/PB: 34.600)** coordena essas frentes em nossa banca, assegurando a defesa de seus direitos. Vamos iniciar um contato com ele via WhatsApp agora?`;
-          waLink = `https://wa.me/${centralNumber}?text=${encodeURIComponent(`Olá, Dr. Vinicius Oliveira. Gostaria de tirar dúvidas sobre Direito do Consumidor / Revisão Contratual.`)}`;
-          waLabel = "Falar com Dr. Vinicius Oliveira";
+          botResponse = `Compreendido, prezado(a) **${activeName}**. A análise técnica de **Contratos e Propriedade Intelectual** requer cuidados boutique. O **Dr. João Victor (OAB/PB: 36.890)** coordena essas frentes em nossa banca, assegurando a defesa de seus direitos. Vamos iniciar um contato com ele via WhatsApp agora?`;
+          waLink = `https://wa.me/${centralNumber}?text=${encodeURIComponent(`Olá, Dr. João Victor. Gostaria de tirar dúvidas sobre Propriedade Intelectual / Revisão Contratual.`)}`;
+          waLabel = "Falar com Dr. João Victor";
           break;
         case "trabalhista":
-          botResponse = `Compreendido, prezado(a) **${activeName}**. Para consultoria preventiva ou mitigação de passivos trabalhistas, nosso escritório atua com modelo focado em resultados eficientes. Gostaria de ser direcionado(a) ao canal central da nossa banca no WhatsApp para agendamento?`;
-          waLink = `https://wa.me/${centralNumber}?text=${encodeURIComponent(`Olá, HATO Advogados. Gostaria de suporte estratégico sobre demandas civis ou contratuais.`)}`;
-          waLabel = "Falar com a Banca HATO";
+          botResponse = `Compreendido, prezado(a) **${activeName}**. Para consultoria preventiva ou mitigação de passivos trabalhistas, o **Dr. João Victor (OAB/PB: 36.890)** é nosso especialista dedicado em **Direito Trabalhista**. Gostaria de ser direcionado(a) ao canal dele no WhatsApp para agendamento?`;
+          waLink = `https://wa.me/${centralNumber}?text=${encodeURIComponent(`Olá, Dr. João Victor. Gostaria de suporte estratégico sobre demandas trabalhistas.`)}`;
+          waLabel = "Falar com Dr. João Victor";
           break;
         case "familia":
-          botResponse = `Compreendo a sensibilidade do caso, prezado(a) **${activeName}**. Divórcios, partilhas e inventários exigem atendimento humanizado e **absoluto sigilo**. A especialista sênior coordenadora desta área é a **Dra. Caroliny Alves (OAB/RJ: 49.548)**. Deseja abrir um canal seguro de agendamento com ela no WhatsApp?`;
-          waLink = `https://wa.me/${centralNumber}?text=${encodeURIComponent(`Olá, Dra. Caroliny Alves. Gostaria de agendar um atendimento sigiloso sobre Direito de Família / Sucessões.`)}`;
-          waLabel = "Falar com Dra. Caroliny Alves";
+          botResponse = `Compreendo a sensibilidade do caso, prezado(a) **${activeName}**. Divórcios, partilhas e inventários exigem atendimento humanizado e **absoluto sigilo**. A especialista sênior coordenadora desta área é a **Dra. Ana Beatriz (OAB/PB: 35.412)**. Deseja abrir um canal seguro de agendamento com ela no WhatsApp?`;
+          waLink = `https://wa.me/${centralNumber}?text=${encodeURIComponent(`Olá, Dra. Ana Beatriz. Gostaria de agendar um atendimento sigiloso sobre Direito de Família / Sucessões.`)}`;
+          waLabel = "Falar com Dra. Ana Beatriz";
           break;
         case "previdenciario":
-          botResponse = `Entendo a relevância, prezado(a) **${activeName}**. Concessões de **Aposentadorias e Benefícios (INSS)** requerem planejamento criterioso. Nossa especialista dedicada é a **Dra. Caroliny Alves (OAB/RJ: 49.548)**, que cuidará de toda a tramitação ágil. Gostaria de contatá-la via WhatsApp?`;
-          waLink = `https://wa.me/${centralNumber}?text=${encodeURIComponent(`Olá, Dra. Caroliny Alves. Gostaria de agendar uma consulta estratégica sobre Aposentadoria / Benefício Previdenciário.`)}`;
-          waLabel = "Falar com Dra. Caroliny Alves";
+          botResponse = `Entendo a relevância, prezado(a) **${activeName}**. Concessões de **Aposentadorias e Benefícios (INSS)** requerem planejamento criterioso. Nossa especialista dedicada é a **Dra. Ana Beatriz (OAB/PB: 35.412)**, que cuidará de toda a tramitação ágil. Gostaria de contatá-la via WhatsApp?`;
+          waLink = `https://wa.me/${centralNumber}?text=${encodeURIComponent(`Olá, Dra. Ana Beatriz. Gostaria de agendar uma consulta estratégica sobre Aposentadoria / Benefício Previdenciário.`)}`;
+          waLabel = "Falar com Dra. Ana Beatriz";
           break;
         case "criminal":
-          botResponse = `Urgência compreendida, prezado(a) **${activeName}**. A defesa em **Direito Penal** e **Assistência a Vítimas** exige combatividade rigorosa e sigilo absoluto. O nosso Sócio-Fundador, **Dr. Erick Hato (OAB/PB: 32.272)**, atua de forma proativa. Posso transferi-lo(a) agora para o canal urgente do Dr. Erick?`;
-          waLink = `https://wa.me/${centralNumber}?text=${encodeURIComponent(`Olá, Dr. Erick Hato. Preciso de suporte estratégico e urgente sobre Defesa Criminal / Assistência a Vítimas.`)}`;
-          waLabel = "Falar com Dr. Erick Hato";
+          botResponse = `Urgência compreendida, prezado(a) **${activeName}**. Nossa banca poderá orientá-lo(a) no encaminhamento adequado da demanda. Gostaria de ser transferido(a) agora para o canal central da **DIAS Advocacia** no WhatsApp?`;
+          waLink = `https://wa.me/${centralNumber}?text=${encodeURIComponent(`Olá, DIAS Advocacia. Preciso de suporte jurídico urgente.`)}`;
+          waLabel = "Falar com a Banca DIAS";
           break;
         default:
           botResponse = `Compreendo, prezado(a) **${activeName}**. Como advocacia boutique, atuamos com absoluto rigor nas principais áreas cíveis e corporativas. Qual das especialidades melhor atende à sua necessidade jurídica atual?`;
@@ -226,7 +226,7 @@ export function FloatingAI() {
           {
             id: Math.random().toString(),
             sender: "bot",
-            text: `É uma honra, prezado(a) **${displayName}**. A HATO Advogados atua sob rigor absoluto. Para direcioná-lo(a) ao especialista correto de nossa banca, qual demanda jurídica necessita de nossa intervenção hoje? (Ou selecione uma das opções abaixo)`,
+            text: `É uma honra, prezado(a) **${displayName}**. A DIAS Advocacia atua sob rigor absoluto. Para direcioná-lo(a) ao especialista correto de nossa banca, qual demanda jurídica necessita de nossa intervenção hoje? (Ou selecione uma das opções abaixo)`,
             timestamp: new Date()
           }
         ]);
@@ -274,7 +274,7 @@ export function FloatingAI() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         className="w-14 h-14 bg-gold-500 hover:bg-gold-400 text-brand-900 rounded-full flex items-center justify-center shadow-2xl relative transition-colors duration-300"
-        aria-label="Conversar com o HATO AI"
+        aria-label="Conversar com o DIAS AI"
       >
         <AnimatePresence mode="wait">
           {isOpen ? (
@@ -322,11 +322,11 @@ export function FloatingAI() {
             <div className="p-4 border-b border-white/5 bg-brand-800 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="w-9 h-9 rounded-full overflow-hidden border border-gold-500/30 relative shrink-0">
-                  <img src="/erick_dark_suit.jpg" alt="Advogado" className="w-full h-full object-cover object-top" />
+                  <img src="/wellem_dias.jpg" alt="Dra. Wellem Dias" className="w-full h-full object-cover object-top" />
                   <span className="absolute bottom-0 right-0 w-2 h-2 bg-green-500 rounded-full border border-brand-800 z-10" />
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-display font-medium text-white text-sm">HATO AI</span>
+                  <span className="font-display font-medium text-white text-sm">DIAS AI</span>
                   <span className="text-[9px] uppercase tracking-widest text-gold-500 font-semibold font-sans">Triagem Jurídica Conversacional</span>
                 </div>
               </div>

@@ -905,7 +905,7 @@ export function Home() {
               Agende uma consulta estratégica com nossa banca de advogados seniores e garanta a melhor estruturação e defesa patrimonial para seu negócio.
             </p>
             <a 
-              href="https://wa.me/5583998442989?text=Ol%C3%A1%2C%20HATO%20Advogados.%20Gostaria%20de%20agendar%20um%20atendimento%20jur%C3%ADdico%20especializado."
+              href="https://wa.me/5583998765432?text=Ol%C3%A1%2C%20DIAS%20Advocacia.%20Gostaria%20de%20agendar%20um%20atendimento%20jur%C3%ADdico%20especializado."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 bg-gold-500 text-brand-900 font-semibold uppercase text-[10px] tracking-[0.25em] hover:bg-gold-400 transition-all duration-500 ease-out hover:scale-[1.02] shadow-xl shadow-gold-500/10"
