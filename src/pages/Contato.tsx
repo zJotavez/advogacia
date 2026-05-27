@@ -145,7 +145,7 @@ export function Contato() {
                       rel="noopener noreferrer" 
                       className="text-cashmere-500/70 text-xs leading-relaxed font-light hover:text-gold-500 transition-colors"
                     >
-                      Rua Afonso Campos, 304 - Salas 13 e 14<br />Centro, Campina Grande - PB<br />CEP: 58400-235
+                      Av. Marechal Floriano Peixoto, 1020 - Salas 501 e 502<br />Centro, Campina Grande - PB<br />CEP: 58400-165
                     </a>
                   </div>
                 </li>
@@ -156,12 +156,12 @@ export function Contato() {
                   <div>
                     <h4 className="text-white font-medium text-sm tracking-wide mb-1">Contato Telefônico</h4>
                     <a 
-                      href="https://wa.me/5583998442989" 
+                      href="https://wa.me/5583998765432" 
                       target="_blank" 
                       rel="noopener noreferrer" 
                       className="text-cashmere-500/70 text-xs leading-relaxed font-light hover:text-gold-500 transition-colors"
                     >
-                      +55 (83) 99844-2989 (WhatsApp Central)
+                      +55 (83) 99876-5432 (WhatsApp Central)
                     </a>
                   </div>
                 </li>
@@ -172,10 +172,10 @@ export function Contato() {
                   <div>
                     <h4 className="text-white font-medium text-sm tracking-wide mb-1">E-mail</h4>
                     <a 
-                      href="mailto:atendimento@hatoadvogados.com.br" 
+                      href="mailto:atendimento@wellemdias.adv.br" 
                       className="text-cashmere-500/70 text-xs leading-relaxed font-light hover:text-gold-500 transition-colors"
                     >
-                      atendimento@hatoadvogados.com.br
+                      atendimento@wellemdias.adv.br
                     </a>
                   </div>
                 </li>
@@ -184,7 +184,7 @@ export function Contato() {
               {/* Styled Google Maps iframe directly integrated */}
               <div className="w-full h-[280px] relative border border-white/[0.05] shadow-2xl overflow-hidden group">
                 <iframe
-                  title="Google Maps Hato Advogados Contato"
+                  title="Google Maps Dias Advocacia Contato"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.406981440786!2d-35.8848772!3d-7.2287239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7aee0f9191d9b3d%3A0x6e2a2223fa8c9d4b!2sR.%20Afonso%20Campos%2C%20304%20-%20Centro%2C%20Campina%20Grande%20-%20PB%2C%2058400-235!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
                   className="w-full h-full border-0 dark-map absolute inset-0 z-10 transition-all duration-700"
                   allowFullScreen={false}

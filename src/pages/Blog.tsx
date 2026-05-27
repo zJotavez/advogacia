@@ -6,30 +6,30 @@ export function Blog() {
   const posts = [
     {
       id: 1,
-      title: "[Placeholder] - Digite Aqui o Título de Direito Empresarial ou Imobiliário",
+      title: "[Placeholder] - Digite Aqui o Título de Direito Empresarial ou Planejamento Patrimonial",
       category: "Direito Empresarial",
       date: "27 Mai 2026",
-      author: "Dr. Erick Hato",
+      author: "Dra. Wellem Dias",
       image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800",
-      excerpt: "[Placeholder] - Insira aqui o resumo ou introdução da notícia sobre Direito Empresarial, governança corporativa ou regularização imobiliária. O Dr. Erick Hato é o autor deste artigo de exemplo."
+      excerpt: "[Placeholder] - Insira aqui o resumo ou introdução da notícia sobre Direito Empresarial, holdings familiares ou planejamento patrimonial. A Dra. Wellem Dias é a autora deste artigo de exemplo."
     },
     {
       id: 2,
-      title: "[Placeholder] - Digite Aqui o Título de Direito Bancário ou Consumidor",
-      category: "Direito Bancário",
+      title: "[Placeholder] - Digite Aqui o Título de Direito Trabalhista ou Bancário",
+      category: "Direito Trabalhista",
       date: "25 Mai 2026",
-      author: "Dr. Vinicius Oliveira",
+      author: "Dr. João Victor",
       image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800",
-      excerpt: "[Placeholder] - Insira aqui o resumo ou introdução da notícia sobre Direito Bancário, reequilíbrio de contratos ou juros abusivos. O Dr. Vinicius Oliveira é o autor deste artigo de exemplo."
+      excerpt: "[Placeholder] - Insira aqui o resumo ou introdução da notícia sobre Direito Trabalhista, mitigação de riscos ou juros bancários. O Dr. João Victor é o autor deste artigo de exemplo."
     },
     {
       id: 3,
       title: "[Placeholder] - Digite Aqui o Título de Direito de Família ou Previdenciário",
       category: "Direito de Família",
       date: "22 Mai 2026",
-      author: "Dra. Caroliny Alves",
+      author: "Dra. Ana Beatriz",
       image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800",
-      excerpt: "[Placeholder] - Insira aqui o resumo ou introdução da notícia sobre planejamento sucessório, divórcios ou concessão de benefícios assistenciais. A Dra. Caroliny Alves é a autora deste artigo de exemplo."
+      excerpt: "[Placeholder] - Insira aqui o resumo ou introdução da notícia sobre divórcios, partilhas de bens ou aposentadorias. A Dra. Ana Beatriz é a autora deste artigo de exemplo."
     }
   ];
 

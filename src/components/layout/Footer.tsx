@@ -16,10 +16,10 @@ export function Footer() {
               Defendendo seus direitos com estratégia jurídica sob medida, segurança patrimonial e excelência técnica nos tribunais superiores.
             </p>
             <div className="flex gap-3">
-              <a href="https://www.instagram.com/hato_advogados/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full border border-white/5 flex items-center justify-center text-cashmere-500/60 hover:text-gold-500 hover:border-gold-500/50 transition-all duration-500">
+              <a href="https://www.instagram.com/wellemdias_advocacia/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full border border-white/5 flex items-center justify-center text-cashmere-500/60 hover:text-gold-500 hover:border-gold-500/50 transition-all duration-500">
                 <Instagram size={16} />
               </a>
-              <a href="https://www.instagram.com/hato_advogados/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full border border-white/5 flex items-center justify-center text-cashmere-500/60 hover:text-gold-500 hover:border-gold-500/50 transition-all duration-500">
+              <a href="https://www.instagram.com/wellemdias_advocacia/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full border border-white/5 flex items-center justify-center text-cashmere-500/60 hover:text-gold-500 hover:border-gold-500/50 transition-all duration-500">
                 <Linkedin size={16} />
               </a>
             </div>
@@ -62,27 +62,27 @@ export function Footer() {
                   rel="noopener noreferrer" 
                   className="text-cashmere-500/70 text-xs leading-relaxed hover:text-gold-500 transition-colors"
                 >
-                  Rua Afonso Campos 304, Salas 13 e 14, Centro, Campina Grande/PB - CEP: 58400-235
+                  Av. Marechal Floriano Peixoto, 1020, Salas 501 e 502, Centro, Campina Grande/PB - CEP: 58400-165
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={16} className="text-gold-500 shrink-0" />
                 <a 
-                  href="https://wa.me/5583998442989" 
+                  href="https://wa.me/5583998765432" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-cashmere-500/70 text-xs hover:text-gold-500 transition-colors"
                 >
-                  +55 (83) 99844-2989
+                  +55 (83) 99876-5432
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={16} className="text-gold-500 shrink-0" />
                 <a 
-                  href="mailto:atendimento@hatoadvogados.com.br" 
+                  href="mailto:atendimento@wellemdias.adv.br" 
                   className="text-cashmere-500/70 text-xs hover:text-gold-500 transition-colors"
                 >
-                  atendimento@hatoadvogados.com.br
+                  atendimento@wellemdias.adv.br
                 </a>
               </li>
             </ul>
@@ -91,7 +91,7 @@ export function Footer() {
 
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-cashmere-500/40 text-[10px] tracking-wider">
-            &copy; {new Date().getFullYear()} HATO ADVOGADOS. TODOS OS DIREITOS RESERVADOS.
+            &copy; {new Date().getFullYear()} DIAS ADVOCACIA. TODOS OS DIREITOS RESERVADOS.
           </p>
           <div className="flex items-center gap-6 text-[10px] text-cashmere-500/40 tracking-wider">
             <Link to="/privacidade" className="hover:text-gold-500 transition-colors">POLÍTICA DE PRIVACIDADE</Link>

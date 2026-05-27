@@ -33,13 +33,13 @@ export function Sobre() {
             className="space-y-6 text-[15px] text-cashmere-500/80 leading-relaxed font-light font-sans"
           >
             <p>
-              Sob a liderança do advogado sócio-fundador <strong className="text-white font-medium">Dr. Erick Hato</strong>, a HATO Advogados consolidou-se como uma banca jurídica boutique de alta performance, pautada por uma ética intransigente, rigor metodológico e acompanhamento próximo de cada caso.
+              Sob a liderança da advogada sócia-fundadora <strong className="text-white font-medium">Dra. Wellem Dias</strong>, a Dias Advocacia consolidou-se como uma banca jurídica boutique de alta performance, pautada por uma ética intransigente, rigor metodológico e acompanhamento próximo de cada caso.
             </p>
             <p>
-              Com sede no Centro de Campina Grande/PB, nossa condução jurídica é pautada por quatro passos fundamentais: primeiro, compreendemos a complexidade do problema; segundo, desenhamos a estratégia processual ou consultiva sob medida; terceiro, executamos com registro minucioso; e, por fim, mantemos uma comunicação totalmente clara e transparente em tempo real com nossos clientes.
+              Com sede em Campina Grande/PB, nossa condução jurídica é pautada por quatro passos fundamentais: primeiro, compreendemos a complexidade do problema; segundo, desenhamos a estratégia processual ou consultiva sob medida; terceiro, executamos com registro minucioso; e, por fim, mantemos uma comunicação totalmente clara e transparente em tempo real com nossos clientes.
             </p>
             <p>
-              Operamos em regime de alta especialização nas áreas de Direito Empresarial, Regularização Imobiliária, Defesa Criminal Avançada, Direito Bancário e do Consumidor, além do Direito de Família e Previdenciário. Nosso compromisso é entregar eficiência, precisão e soluções jurídicas altamente responsáveis para preservar e defender os interesses de nossos representados.
+              Operamos em regime de alta especialização nas áreas de Direito Empresarial, Planejamento Patrimonial, Direito de Família, Previdenciário, Trabalhista e Direito Bancário. Nosso compromisso é entregar eficiência, precisão e soluções jurídicas altamente responsáveis para preservar e defender os interesses de nossos representados.
             </p>
             
             <div className="pt-8 border-t border-white/5 mt-8 space-y-4">
@@ -64,7 +64,7 @@ export function Sobre() {
             <div className="absolute inset-y-6 right-6 left-12 overflow-hidden border border-white/[0.04] shadow-2xl">
               <img 
                 src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=800" 
-                alt="Hato Advogados - Sala de Conferências" 
+                alt="Dias Advocacia - Sala de Conferências" 
                 className="w-full h-full object-cover grayscale opacity-80 hover:opacity-100 transition-opacity duration-750"
               />
             </div>
@@ -79,7 +79,7 @@ export function Sobre() {
             >
               <img 
                 src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=600" 
-                alt="Hato Advogados - Balança da Justiça" 
+                alt="Dias Advocacia - Balança da Justiça" 
                 className="w-full h-full object-cover grayscale opacity-90 hover:opacity-100 transition-opacity duration-750"
               />
             </motion.div>

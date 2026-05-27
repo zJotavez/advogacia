@@ -86,7 +86,7 @@ export function Logo({ className, size = 36, showText = true, textColor = "text-
           strokeLinejoin="round"
         />
 
-        {/* H Monogram (Left & Right vertical bars inside U-shield, and crossbar) */}
+        {/* D Monogram (Left vertical bar and curvature) */}
         <path
           d="M 42,31 L 42,61"
           stroke="currentColor"
@@ -94,26 +94,21 @@ export function Logo({ className, size = 36, showText = true, textColor = "text-
           strokeLinecap="round"
         />
         <path
-          d="M 58,31 L 58,61"
+          d="M 42,31 L 50,31 C 58,31 58,61 50,61 L 42,61"
           stroke="currentColor"
           strokeWidth="3.2"
           strokeLinecap="round"
-        />
-        <path
-          d="M 42,46 L 58,46"
-          stroke="currentColor"
-          strokeWidth="3.2"
-          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
 
       {showText && (
         <div className="flex flex-col">
           <span className={cn("font-display font-medium tracking-[0.2em] text-sm md:text-base leading-none transition-colors group-hover:text-gold-500 duration-500", textColor)}>
-            HATO
+            DIAS
           </span>
           <span className="font-sans text-[8px] uppercase tracking-[0.4em] text-cashmere-500">
-            Advogados
+            Advocacia
           </span>
         </div>
       )}

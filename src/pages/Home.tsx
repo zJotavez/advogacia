@@ -134,31 +134,31 @@ export function Home() {
 
   const team = [
     {
-      id: "erick",
-      name: "Dr. Erick Hato",
-      role: "CEO • Sócio-Fundador",
-      oab: "OAB/PB: 32.272",
-      spec: "Direito Empresarial, Regularização Imobiliária, Administrativo e Defesa Criminal",
-      image: "/erick_gray_suit.png",
-      bio: "Especialista em Governança Corporativa e Compliance. Foco em advocacia consultiva e combativa, proativa e criteriosa sob método e ética absoluta."
+      id: "wellem",
+      name: "Dra. Wellem Dias",
+      role: "Fundadora • Diretora Executiva",
+      oab: "OAB/PB: 30.120",
+      spec: "Direito Empresarial, Família e Planejamento Patrimonial",
+      image: "/wellem_dias.jpg",
+      bio: "Especialista em Direito Empresarial, Governança Corporativa e Sucessões. Atuação estratégica com foco em resultados rápidos, seguros e eficientes."
     },
     {
-      id: "vinicius",
-      name: "Dr. Vinicius Oliveira",
-      role: "Advogado Associado Sênior",
-      oab: "OAB/PB: 34.600",
-      spec: "Direito Bancário, Contratos, Juros Abusivos, Repactuação de Dívidas & Consumidor",
-      image: "/dr_vinicius.jpg",
-      bio: "Especialista no reequilíbrio contratual bancário e na defesa qualificada do patrimônio contra juros abusivos."
-    },
-    {
-      id: "caroliny",
-      name: "Dra. Caroliny Alves",
+      id: "ana",
+      name: "Dra. Ana Beatriz",
       role: "Advogada Associada Sênior",
-      oab: "OAB/RJ: 49.548",
-      spec: "Direito de Família, Previdenciário (Aposentadorias e Benefícios Assistenciais)",
-      image: "/dra_caroliny.jpg",
-      bio: "Acompanhamento humanizado e ágil na concessão de benefícios previdenciários e na mediação de conflitos familiares."
+      oab: "OAB/PB: 35.412",
+      spec: "Direito de Família, Previdenciário (Aposentadorias e Benefícios)",
+      image: "/ana_beatriz.jpg",
+      bio: "Atendimento humanizado na concessão de aposentadorias, benefícios previdenciários, divórcios e planejamentos de partilha de bens."
+    },
+    {
+      id: "joao",
+      name: "Dr. João Victor",
+      role: "Advogado Associado Sênior",
+      oab: "OAB/PB: 36.890",
+      spec: "Direito Trabalhista, Propriedade Intelectual e Direito Bancário",
+      image: "/joao_victor.jpg",
+      bio: "Foco na mitigação de riscos contratuais, reequilíbrio de contratos financeiros abusivos e na proteção estratégica de marcas e patentes."
     }
   ];
 
@@ -253,7 +253,7 @@ export function Home() {
         >
           <img 
             src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=2000" 
-            alt="Hato Advogados - Escritório de Advocacia" 
+            alt="Dias Advocacia - Escritório de Advocacia" 
             className="w-full h-full object-cover grayscale contrast-115 brightness-[0.55] object-center"
           />
         </motion.div>
@@ -272,7 +272,7 @@ export function Home() {
           >
             <motion.div variants={fadeInUp} className="flex items-center gap-4 mb-6">
               <div className="w-8 h-px bg-gold-500" />
-              <span className="text-[10px] uppercase tracking-[0.4em] font-medium text-gold-500">HATO ADVOGADOS</span>
+              <span className="text-[10px] uppercase tracking-[0.4em] font-medium text-gold-500">DIAS ADVOCACIA</span>
             </motion.div>
             
             <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl lg:text-8xl font-display font-extralight tracking-tight leading-[1.05] text-cashmere-300 mb-8">
@@ -281,12 +281,12 @@ export function Home() {
             </motion.h1>
             
             <motion.p variants={fadeInUp} className="text-base md:text-lg text-cashmere-500/80 mb-10 max-w-2xl leading-relaxed font-light text-balance">
-              Sob a liderança do Dr. Erick Hato, atuamos com rigor, ética e método absoluto para construir soluções jurídicas ágeis, eficientes e responsáveis.
+              Sob a leadership da Dra. Wellem Dias, atuamos com rigor, ética e método absoluto para construir soluções jurídicas ágeis, eficientes e responsáveis.
             </motion.p>
             
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-5">
               <a 
-                href="https://wa.me/5583998442989?text=Ol%C3%A1%2C%20HATO%20Advogados.%20Gostaria%20de%20agendar%20um%20atendimento%20jur%C3%ADdico%20especializado."
+                href="https://wa.me/5583998765432?text=Ol%C3%A1%2C%20DIAS%20Advocacia.%20Gostaria%20de%20agendar%20um%20atendimento%20jur%C3%ADdico%20especializado."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-4 bg-gold-500 text-brand-900 font-semibold uppercase text-[10px] tracking-[0.25em] text-center hover:bg-gold-400 hover:scale-[1.02] transition-all duration-500 ease-out flex items-center justify-center gap-2 group shadow-xl shadow-gold-500/10 w-full sm:w-auto"
@@ -313,7 +313,7 @@ export function Home() {
       <section className="py-6 bg-brand-800 border-y border-gold-500/15 overflow-hidden relative z-20 select-none">
         <div className="flex whitespace-nowrap overflow-hidden">
           <div className="animate-marquee flex items-center gap-16 text-gold-500/85 font-display font-light text-sm tracking-[0.25em] uppercase">
-            <span>HATO ADVOGADOS • ÉTICA E TRANSPARÊNCIA • MÉTODO E RIGOR ESTRATÉGICO • COMPROMISSO COM O CLIENTE • HATO ADVOGADOS • ÉTICA E TRANSPARÊNCIA • MÉTODO E RIGOR ESTRATÉGICO • COMPROMISSO COM O CLIENTE •</span>
+            <span>DIAS ADVOCACIA • ÉTICA E TRANSPARÊNCIA • MÉTODO E RIGOR ESTRATÉGICO • COMPROMISSO COM O CLIENTE • DIAS ADVOCACIA • ÉTICA E TRANSPARÊNCIA • MÉTODO E RIGOR ESTRATÉGICO • COMPROMISSO COM O CLIENTE •</span>
           </div>
         </div>
       </section>
@@ -343,7 +343,7 @@ export function Home() {
             <div className="absolute inset-0 bg-[#070B19]/25 z-10 pointer-events-none" />
             <img 
               src="/equipe.jpg" 
-              alt="Hato Advogados - Banca de Advogados Reunida" 
+              alt="Dias Advocacia - Banca de Advogados Reunida" 
               className="w-full aspect-[3/2] md:aspect-[16/9] object-cover grayscale object-[center_15%] select-none"
             />
             <div className="absolute bottom-6 left-6 z-20 bg-brand-900/90 backdrop-blur-sm px-6 py-4 border border-white/5 max-w-lg hidden sm:block">
@@ -570,13 +570,13 @@ export function Home() {
               </h2>
               <div className="space-y-6 text-cashmere-500/85 text-[15px] leading-relaxed font-light font-sans text-balance">
                 <p>
-                  Sob a liderança do advogado <strong className="text-white font-medium">Dr. Erick Hato</strong>, a HATO Advogados atua com foco em soluções jurídicas responsáveis, eficientes e perfeitamente adequadas à realidade de seus clientes.
+                  Sob a liderança da advogada <strong className="text-white font-medium">Dra. Wellem Dias</strong>, a Dias Advocacia atua com foco em soluções jurídicas responsáveis, eficientes e perfeitamente adequadas à realidade de seus clientes.
                 </p>
                 <p>
                   Nosso método assenta-se em quatro pilares inegociáveis: primeiro, a <strong className="text-white font-medium">compreensão do problema</strong> real de forma atenta; segundo, a <strong className="text-white font-medium">definição da melhor estratégia</strong> legal; terceiro, a <strong className="text-white font-medium">execução precisa e documentada</strong>; e, por fim, o acompanhamento próximo com <strong className="text-white font-medium">comunicação clara e transparente</strong>.
                 </p>
                 <p>
-                  Operamos com atendimento boutique em Campina Grande/PB e ampla projeção nacional, integrando governança corporativa, compliance e defesa contundente perante os órgãos administrativos e judiciais.
+                  Operamos com atendimento boutique em Campina Grande/PB e ampla projeção nacional, integrando governança corporativa, planejamento patrimonial e defesa contundente perante os órgãos administrativos e judiciais.
                 </p>
               </div>
               
@@ -602,7 +602,7 @@ export function Home() {
               >
                 <img 
                   src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=800" 
-                  alt="Hato Advogados - Sala de Reuniões" 
+                  alt="Dias Advocacia - Sala de Reuniões" 
                   className="w-full h-full object-cover grayscale opacity-90 hover:opacity-100 transition-opacity duration-750"
                 />
               </motion.div>
@@ -617,7 +617,7 @@ export function Home() {
               >
                 <img 
                   src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&q=80&w=600" 
-                  alt="Hato Advogados - Biblioteca de Direito" 
+                  alt="Dias Advocacia - Biblioteca de Direito" 
                   className="w-full h-full object-cover grayscale opacity-90 hover:opacity-100 transition-opacity duration-750"
                 />
               </motion.div>
@@ -632,7 +632,7 @@ export function Home() {
               >
                 <img 
                   src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=600" 
-                  alt="Hato Advogados - Recepção Boutique" 
+                  alt="Dias Advocacia - Recepção Boutique" 
                   className="w-full h-full object-cover grayscale opacity-90 hover:opacity-100 transition-opacity duration-750 object-top"
                 />
               </motion.div>

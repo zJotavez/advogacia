@@ -22,32 +22,32 @@ function SEOManager() {
   const location = useLocation();
 
   useEffect(() => {
-    let title = "HATO Advogados | Advocacia de Elite & Corporativa";
-    let description = "HATO Advogados é uma banca jurídica boutique sob a liderança do Dr. Erick Hato. Atuação em Direito Empresarial, Imobiliário, Bancário, de Família, Previdenciário e Defesa Criminal.";
+    let title = "DIAS Advocacia | Advocacia de Elite & Corporativa";
+    let description = "DIAS Advocacia é uma banca jurídica boutique sob a liderança da Dra. Wellem Dias. Atuação em Direito Empresarial, Bancário, de Família, Previdenciário e Trabalhista.";
 
     switch (location.pathname) {
       case "/":
-        title = "HATO Advogados | Advocacia de Elite & Corporativa";
-        description = "HATO Advogados é uma banca jurídica boutique sob a liderança do Dr. Erick Hato. Especialistas em Direito Empresarial, Bancário, Imobiliário, Previdenciário e Defesa Criminal em Campina Grande/PB.";
+        title = "DIAS Advocacia | Advocacia de Elite & Corporativa";
+        description = "DIAS Advocacia é uma banca jurídica boutique sob a liderança da Dra. Wellem Dias. Especialistas em Direito Empresarial, Bancário, de Família, Previdenciário e Trabalhista em Campina Grande/PB.";
         break;
       case "/sobre":
-        title = "Nossa História & Valores | HATO Advogados";
-        description = "Conheça a história, o método rigoroso de trabalho e os pilares de transparência e excelência da HATO Advogados em Campina Grande/PB.";
+        title = "Nossa História & Valores | DIAS Advocacia";
+        description = "Conheça a história, o método rigoroso de trabalho e os pilares de transparência e excelência da DIAS Advocacia em Campina Grande/PB.";
         break;
       case "/advogados":
-        title = "Nossa Banca de Advogados | HATO Advogados";
-        description = "Conheça nosso corpo jurídico de elite: Dr. Erick Hato, Dr. Vinicius Oliveira e Dra. Caroliny Alves. Profissionais altamente qualificados para proteger seus interesses.";
+        title = "Nossa Banca de Advogados | DIAS Advocacia";
+        description = "Conheça nosso corpo jurídico de elite: Dra. Wellem Dias, Dra. Ana Beatriz e Dr. João Victor. Profissionais altamente qualificados para proteger seus interesses.";
         break;
       case "/atuacao":
-        title = "Áreas de Atuação Jurídica | HATO Advogados";
-        description = "Oferecemos assessoria jurídica de alto padrão em Direito Empresarial, Regularização Imobiliária, Direito Bancário, Família, Previdenciário e Defesa Criminal.";
+        title = "Áreas de Atuação Jurídica | DIAS Advocacia";
+        description = "Oferecemos assessoria jurídica de alto padrão em Direito Empresarial, Regularização Imobiliária, Direito Bancário, Família, Previdenciário e Trabalhista.";
         break;
       case "/blog":
-        title = "Inteligência Jurídica & Notícias | HATO Advogados";
+        title = "Inteligência Jurídica & Notícias | DIAS Advocacia";
         description = "Acompanhe artigos informativos, novidades jurisprudenciais e inteligência jurídica escritas diretamente pela nossa banca de advogados seniores.";
         break;
       case "/contato":
-        title = "Fale com um Especialista | HATO Advogados";
+        title = "Fale com um Especialista | DIAS Advocacia";
         description = "Entre em contato direto com a nossa banca boutique no Centro de Campina Grande/PB e agende uma consulta estratégica presencial ou virtual.";
         break;
       default:

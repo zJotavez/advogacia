@@ -9,15 +9,15 @@ export function AreasAtuacao() {
       title: "Direito Empresarial", 
       desc: "Consultoria corporativa preventiva, estruturação societária, compliance, governança e contratos estratégicos.",
       bg: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=600",
-      link: "https://wa.me/5583998442989?text=Ol%C3%A1%2C%20Dr.%20Erick%20Hato.%20Gostaria%20de%20um%20atendimento%20jur%C3%ADdico%20especializado%20em%20Direito%20Empresarial."
+      link: "https://wa.me/5583998765432?text=Ol%C3%A1%2C%20Dra.%20Wellem%20Dias.%20Gostaria%20de%20um%20atendimento%20jur%C3%ADdico%20especializado%20em%20Direito%20Empresarial."
     },
     { 
       id: 2, 
       icon: Landmark, 
-      title: "Regularização Imobiliária", 
-      desc: "Regularizações de imóveis urbanos e rurais, auditoria de riscos documentais e segurança nas transações imobiliárias.",
+      title: "Planejamento Patrimonial", 
+      desc: "Estruturação de holdings familiares, proteção de ativos, auditoria documental e planejamento sucessório inteligente.",
       bg: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=600",
-      link: "https://wa.me/5583998442989?text=Ol%C3%A1%2C%20Dr.%20Erick%20Hato.%20Gostaria%20de%20um%20atendimento%20jur%C3%ADdico%20especializado%20em%20Regulariza%C3%A7%C3%A3o%20Imobili%C3%A1ria."
+      link: "https://wa.me/5583998765432?text=Ol%C3%A1%2C%20Dra.%20Wellem%20Dias.%20Gostaria%20de%20um%20atendimento%20jur%C3%ADdico%20especializado%20em%20Planejamento%20Patrimonial."
     },
     { 
       id: 3, 
@@ -25,15 +25,15 @@ export function AreasAtuacao() {
       title: "Direito Bancário & Juros Abusivos", 
       desc: "Revisão judicial de contratos bancários abusivos, suspensão de leilões e repactuação de dívidas de alta complexidade.",
       bg: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=600",
-      link: "https://wa.me/5583998442989?text=Ol%C3%A1%2C%20Dr.%20Vinicius%20Oliveira.%20Gostaria%20de%20uma%20consulta%20sobre%20Direito%20Banc%C3%A1rio%20e%20Revis%C3%A3o%20de%20Juros%20Abusivos."
+      link: "https://wa.me/5583998765432?text=Ol%C3%A1%2C%20Dr.%20Jo%C3%A3o%20Victor.%20Gostaria%20de%20uma%20consulta%20sobre%20Direito%20Banc%C3%A1rio%20e%20Revis%C3%A3o%20de%20Juros."
     },
     { 
       id: 4, 
       icon: HeartHandshake, 
       title: "Direito de Família", 
-      desc: "Sucessões, partilha patrimonial, inventários rápidos, divórcios consensuais e litígios com máximo sigilo e respeito.",
+      desc: "Sucessões, partilha patrimonial, divórcios consensuais ou litigiosos e inventários rápidos com máximo sigilo e respeito.",
       bg: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=600",
-      link: "https://wa.me/5583998442989?text=Ol%C3%A1%2C%20Dra.%20Caroliny%20Alves.%20Gostaria%20de%20agendar%20um%20atendimento%20sobre%20Direito%20de%20Fam%C3%ADlia."
+      link: "https://wa.me/5583998765432?text=Ol%C3%A1%2C%20Dra.%20Ana%20Beatriz.%20Gostaria%20de%20agendar%20um%20atendimento%20sobre%20Direito%20de%20Fam%C3%ADlia."
     },
     { 
       id: 5, 
@@ -41,15 +41,15 @@ export function AreasAtuacao() {
       title: "Previdenciário & Aposentadorias", 
       desc: "Planejamento previdenciário, concessão de aposentadorias de regimes diversos e benefícios assistenciais no INSS.",
       bg: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=600",
-      link: "https://wa.me/5583998442989?text=Ol%C3%A1%2C%20Dra.%20Caroliny%20Alves.%20Gostaria%20de%20agendar%20um%20atendimento%20sobre%20Aposentadoria%20e%20Benef%C3%ADcios%20Previdenci%C3%A1rios."
+      link: "https://wa.me/5583998765432?text=Ol%C3%A1%2C%20Dra.%20Ana%20Beatriz.%20Gostaria%20de%20agendar%20um%20atendimento%20sobre%20Aposentadoria."
     },
     { 
       id: 6, 
       icon: Scale, 
-      title: "Defesa Criminal Especializada", 
-      desc: "Atuação criminal contundente nos tribunais estaduais e federais, e assistência especializada completa a vítimas.",
+      title: "Trabalhista & Propriedade Intelectual", 
+      desc: "Defesa estratégica do trabalhador, auditoria preventiva para empresas e registro e proteção de marcas, patentes e ativos intelectuais.",
       bg: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=600",
-      link: "https://wa.me/5583998442989?text=Ol%C3%A1%2C%20Dr.%20Erick%20Hato.%20Gostaria%20de%20uma%20consulta%20estrat%C3%A9gica%20em%20Defesa%20Criminal."
+      link: "https://wa.me/5583998765432?text=Ol%C3%A1%2C%20Dr.%20Jo%C3%A3o%20Victor.%20Gostaria%20de%20uma%20consulta%20estrat%C3%A9gica%20em%20Direito%20Trabalhista%20e%20Intelectual."
     },
   ];
 
