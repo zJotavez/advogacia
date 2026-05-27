@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Linkedin, Mail, Phone } from "lucide-react";
+import { Instagram, Mail, Phone } from "lucide-react";
 
 export function Advogados() {
   const team = [
