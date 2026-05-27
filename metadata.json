@@ -1,0 +1,6 @@
+{
+  "name": "HATO Advogados",
+  "description": "Escritório de advocacia de alto padrão",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

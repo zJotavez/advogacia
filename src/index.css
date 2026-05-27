@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-900: #070B19; /* Azul Marinho Imperial Profundo */
+  --color-brand-800: #0C122C; /* Azul Safira Profundo */
+  --color-brand-700: #141F47; /* Azul Nobre */
+  --color-brand-600: #1E2E69; /* Azul Safira Vibrante */
+
+  --color-gold-600: #9B7E3E;
+  --color-gold-500: #B0924F;
+  --color-gold-400: #C2A86A;
+  --color-gold-300: #D3BF8C;
+
+  --color-cashmere-300: #EAE6DF;
+  --color-cashmere-400: #E3DFD5;
+  --color-cashmere-500: #D4CEC3;
+
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", "Cinzel", "Georgia", serif;
+  --font-serif: "Cormorant Garamond", "Georgia", serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-brand-900);
+    color: var(--color-cashmere-400);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    background-image: 
+      radial-gradient(circle at 50% 0%, rgba(194, 168, 106, 0.08) 0%, transparent 60%),
+      radial-gradient(circle at 0% 100%, rgba(30, 46, 105, 0.35) 0%, transparent 55%),
+      radial-gradient(circle at 100% 50%, rgba(12, 18, 44, 0.8) 0%, transparent 60%);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, .font-premium-serif {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Custom Premium Utilities and Animations */
+@utility text-balance {
+  text-wrap: balance;
+}
+
+@utility hairline-border-t {
+  border-top: 1px solid rgba(227, 223, 213, 0.07);
+}
+
+@utility hairline-border-b {
+  border-bottom: 1px solid rgba(227, 223, 213, 0.07);
+}
+
+@utility hairline-border-l {
+  border-left: 1px solid rgba(227, 223, 213, 0.07);
+}
+
+@utility hairline-border-r {
+  border-right: 1px solid rgba(227, 223, 213, 0.07);
+}
+
+/* Custom Scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-brand-900);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-700);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-500);
+}
+
+/* Infinite Marquee Animations */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite reverse;
+}
+
+/* Styled map iframe filter */
+.dark-map {
+  filter: grayscale(1) invert(0.92) contrast(1.15) brightness(0.95);
+  transition: filter 0.5s ease;
+}
+.dark-map:hover {
+  filter: grayscale(0.2) invert(0) contrast(1) brightness(1);
+}
