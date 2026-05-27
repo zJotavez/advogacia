@@ -13,14 +13,14 @@
     stroke-linecap="round"
   />
   
-  {/* Left Laurel Leaves */}
+  <!-- Left Laurel Leaves -->
   <path d="M 28,45 C 23,43 25,38 28,45 C 31,40 33,43 28,45" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
   <path d="M 29,52 C 24,51 25,46 29,52 C 32,48 34,51 29,52" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
   <path d="M 32,59 C 27,60 27,55 32,59 C 34,55 37,58 32,59" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
   <path d="M 37,66 C 32,68 31,63 37,66 C 39,62 42,65 37,66" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
   <path d="M 43,71 C 39,74 37,69 43,71 C 44,67 47,70 43,71" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
 
-  {/* Right Laurel Leaves */}
+  <!-- Right Laurel Leaves -->
   <path d="M 72,45 C 77,43 75,38 72,45 C 69,40 67,43 72,45" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
   <path d="M 71,52 C 76,51 75,46 71,52 C 68,48 66,51 71,52" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
   <path d="M 68,59 C 73,60 73,55 68,59 C 66,55 63,58 68,59" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />

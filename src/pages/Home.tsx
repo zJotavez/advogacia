@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Scale, ShieldCheck, Briefcase, Users, ChevronRight, Award, MessageSquare, Star, Landmark, MapPin, Phone, Mail } from "lucide-react";
-import { useRef } from "react";
+import { ArrowRight, Scale, ShieldCheck, Briefcase, Users, ChevronRight, ChevronLeft, Award, MessageSquare, Star, Landmark, MapPin, Phone, Mail } from "lucide-react";
+import { useRef, useState, useEffect } from "react";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 35 },
@@ -22,6 +22,107 @@ export function Home() {
   const containerRef = useRef(null);
   const heroRef = useRef(null);
   
+  // Refs e Estados para o Carrossel Infinito Mobile de Advogados
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const [isInteracting, setIsInteracting] = useState(false);
+  const [activeDot, setActiveDot] = useState(0);
+  const interactionTimeoutRef = useRef<any>(null);
+
+  // Auto-scroll loop infinito de cards de advogados (mobile) - da esquerda para a direita
+  useEffect(() => {
+    const container = carouselRef.current;
+    if (!container) return;
+
+    let animationFrameId: number;
+
+    const initScroll = () => {
+      const setWidth = container.scrollWidth / 3;
+      if (setWidth > 0) {
+        container.scrollLeft = setWidth;
+      } else {
+        requestAnimationFrame(initScroll);
+      }
+    };
+    initScroll();
+
+    const scrollSpeed = 0.45; // velocidade sutil e fluida
+
+    const updateScroll = () => {
+      if (!isInteracting && container) {
+        const setWidth = container.scrollWidth / 3;
+        if (setWidth > 0) {
+          container.scrollLeft -= scrollSpeed;
+          if (container.scrollLeft <= 0) {
+            container.scrollLeft += setWidth;
+          }
+        }
+      }
+      animationFrameId = requestAnimationFrame(updateScroll);
+    };
+
+    animationFrameId = requestAnimationFrame(updateScroll);
+    
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+      if (interactionTimeoutRef.current) {
+        clearTimeout(interactionTimeoutRef.current);
+      }
+    };
+  }, [isInteracting]);
+
+  const handleInteractionStart = () => {
+    setIsInteracting(true);
+    if (interactionTimeoutRef.current) {
+      clearTimeout(interactionTimeoutRef.current);
+    }
+  };
+
+  const handleInteractionEnd = () => {
+    if (interactionTimeoutRef.current) {
+      clearTimeout(interactionTimeoutRef.current);
+    }
+    interactionTimeoutRef.current = setTimeout(() => {
+      setIsInteracting(false);
+    }, 2500);
+  };
+
+  const handleScroll = () => {
+    const container = carouselRef.current;
+    if (!container) return;
+
+    const setWidth = container.scrollWidth / 3;
+    if (setWidth > 0) {
+      if (container.scrollLeft >= 2 * setWidth) {
+        container.scrollLeft -= setWidth;
+      } else if (container.scrollLeft <= 0) {
+        container.scrollLeft += setWidth;
+      }
+      
+      const normalizedScroll = container.scrollLeft % setWidth;
+      const cardWidth = setWidth / 3;
+      const index = Math.round(normalizedScroll / cardWidth) % 3;
+      setActiveDot(index);
+    }
+  };
+
+  const scrollManual = (direction: "left" | "right") => {
+    const container = carouselRef.current;
+    if (!container) return;
+
+    handleInteractionStart();
+
+    const setWidth = container.scrollWidth / 3;
+    const cardWidth = setWidth / 3;
+    const scrollAmount = direction === "left" ? -cardWidth : cardWidth;
+
+    container.scrollTo({
+      left: container.scrollLeft + scrollAmount,
+      behavior: "smooth"
+    });
+
+    handleInteractionEnd();
+  };
+
   const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ["start start", "end start"]
@@ -251,8 +352,8 @@ export function Home() {
             </div>
           </motion.div>
 
-          {/* Cards Individuais de Advogados com Revelação Sequencial (3 colunas) */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          {/* Versão Desktop (Cards Estáticos Lado a Lado) */}
+          <div className="hidden md:grid grid-cols-3 gap-8">
             {team.map((person, index) => (
               <motion.div
                 key={person.id}
@@ -292,6 +393,106 @@ export function Home() {
                 </div>
               </motion.div>
             ))}
+          </div>
+
+          {/* Versão Mobile (Carrossel Horizontal de Loop Infinito da Esquerda para Direita com Suporte Tátil & Manual) */}
+          <div className="block md:hidden relative w-full overflow-hidden pb-8 px-1 select-none">
+            
+            {/* Contêiner de Arrastar/Rolar nativo com Refs */}
+            <div 
+              ref={carouselRef}
+              className="flex gap-3 overflow-x-auto scrollbar-none scroll-smooth px-4"
+              onTouchStart={handleInteractionStart}
+              onTouchEnd={handleInteractionEnd}
+              onMouseDown={handleInteractionStart}
+              onMouseUp={handleInteractionEnd}
+              onScroll={handleScroll}
+            >
+              {[...team, ...team, ...team].map((person, index) => (
+                <div 
+                  key={`${person.id}-${index}`} 
+                  className="w-[165px] shrink-0"
+                >
+                  <div className="group relative flex flex-col bg-brand-800/40 border border-white/[0.04] rounded-xl overflow-hidden hover:border-gold-500/25 transition-all duration-700 w-full shadow-2xl h-full">
+                    
+                    {/* Imagem do Advogado Compacta */}
+                    <div className="aspect-[4/5] relative overflow-hidden shrink-0">
+                      <img 
+                        src={person.image} 
+                        alt={person.name} 
+                        className="w-full h-full object-cover grayscale opacity-90 object-[center_10%] select-none"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-brand-900/60 to-transparent z-10" />
+                    </div>
+
+                    {/* Informações Compactadas e Reduzidas para Mobile */}
+                    <div className="p-3 flex flex-col justify-between flex-1 min-h-[170px]">
+                      <div>
+                        <span className="text-gold-500 text-[8px] font-bold tracking-[0.15em] uppercase mb-1 block leading-none">
+                          {person.role.split(" • ")[0]}
+                        </span>
+                        <h3 className="text-sm font-display font-medium text-white mb-0.5 leading-tight">{person.name}</h3>
+                        <span className="text-cashmere-500/60 text-[9px] font-semibold block mb-2">{person.oab}</span>
+                        <p className="text-cashmere-500/70 text-[10px] leading-relaxed font-light mb-3 font-sans text-justify line-clamp-3">
+                          {person.spec}
+                        </p>
+                      </div>
+                      
+                      <Link 
+                        to={`/advogados#${person.id}`}
+                        className="text-[8px] font-semibold uppercase tracking-[0.2em] text-gold-500 border-t border-white/5 pt-2 flex items-center justify-between mt-auto"
+                      >
+                        Ver Perfil
+                        <ChevronRight size={10} />
+                      </Link>
+                    </div>
+
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Controles Manuais: Setas Laterais */}
+            <button 
+              onClick={() => scrollManual("left")}
+              className="absolute left-1 top-[35%] -translate-y-1/2 w-8 h-8 rounded-full bg-brand-900/80 border border-white/10 flex items-center justify-center text-gold-500 active:scale-90 transition-transform z-20 shadow-lg"
+              aria-label="Advogado Anterior"
+            >
+              <ChevronLeft size={16} />
+            </button>
+            <button 
+              onClick={() => scrollManual("right")}
+              className="absolute right-1 top-[35%] -translate-y-1/2 w-8 h-8 rounded-full bg-brand-900/80 border border-white/10 flex items-center justify-center text-gold-500 active:scale-90 transition-transform z-20 shadow-lg"
+              aria-label="Próximo Advogado"
+            >
+              <ChevronRight size={16} />
+            </button>
+
+            {/* Bullets / Indicadores de Paginação */}
+            <div className="flex justify-center gap-1.5 mt-5">
+              {team.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => {
+                    const container = carouselRef.current;
+                    if (!container) return;
+                    handleInteractionStart();
+                    const setWidth = container.scrollWidth / 3;
+                    const cardWidth = setWidth / 3;
+                    container.scrollTo({
+                      left: setWidth + idx * cardWidth,
+                      behavior: "smooth"
+                    });
+                    handleInteractionEnd();
+                  }}
+                  className={`w-1.5 h-1.5 rounded-full transition-all duration-500 ${
+                    idx === activeDot ? "bg-gold-500 w-3.5" : "bg-white/10"
+                  }`}
+                  aria-label={`Ir para o advogado ${idx + 1}`}
+                />
+              ))}
+            </div>
+
           </div>
 
         </div>
@@ -473,7 +674,7 @@ export function Home() {
           </div>
 
           {/* Grid de Especialidades com Fundo Temático */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
             {especialidades.map((area, index) => (
               <motion.div
                 key={area.id}
@@ -481,7 +682,7 @@ export function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.8, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="group relative p-8 md:p-10 overflow-hidden bg-brand-900 border border-white/[0.04] hover:border-gold-500/30 transition-all duration-700 flex flex-col justify-between min-h-[300px]"
+                className="group relative p-4 md:p-10 overflow-hidden bg-brand-900 border border-white/[0.04] hover:border-gold-500/30 transition-all duration-700 flex flex-col justify-between min-h-[190px] md:min-h-[300px]"
               >
                 {/* Imagem de Fundo do Card */}
                 <div className="absolute inset-0 z-0 scale-105 group-hover:scale-100 transition-transform duration-1000">
@@ -495,20 +696,20 @@ export function Home() {
                 <div className="absolute inset-0 bg-gradient-to-b from-brand-900 via-brand-900/85 to-brand-900 z-10" />
 
                 <div className="relative z-20">
-                  <h3 className="text-2xl font-display font-medium text-white mb-4 group-hover:text-gold-500 transition-colors duration-500">
+                  <h3 className="text-sm md:text-2xl font-display font-medium text-white mb-2 md:mb-4 group-hover:text-gold-500 transition-colors duration-500 leading-tight">
                     {area.title}
                   </h3>
-                  <p className="text-cashmere-500/65 text-xs leading-relaxed font-light font-sans text-justify">
+                  <p className="text-cashmere-500/65 text-xs leading-relaxed font-light font-sans text-justify hidden md:block">
                     {area.desc}
                   </p>
                 </div>
 
-                <div className="relative z-20 flex items-center justify-between mt-8 pt-4 border-t border-white/[0.03]">
-                  <Link to={`/atuacao`} className="text-[10px] font-semibold uppercase tracking-[0.2em] text-cashmere-450 group-hover:text-gold-500 transition-colors duration-500">
+                <div className="relative z-20 flex items-center justify-between mt-4 md:mt-8 pt-3 md:pt-4 border-t border-white/[0.03]">
+                  <Link to={`/atuacao`} className="text-[9px] md:text-[10px] font-semibold uppercase tracking-[0.2em] text-cashmere-450 group-hover:text-gold-500 transition-colors duration-500">
                     Saber Mais
                   </Link>
-                  <div className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-gold-500 group-hover:border-gold-500 group-hover:text-brand-900 transition-all duration-500">
-                    <ArrowRight size={12} />
+                  <div className="w-6 h-6 md:w-8 md:h-8 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-gold-500 group-hover:border-gold-500 group-hover:text-brand-900 transition-all duration-500">
+                    <ArrowRight size={10} className="md:w-3 md:h-3" />
                   </div>
                 </div>
               </motion.div>
